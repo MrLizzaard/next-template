@@ -1,12 +1,11 @@
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
+import Layout from "@/components/Layout";
 import type { NextPage } from "next";
-import { useState } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 const Home: NextPage = () => {
-  const [test, setTest] = useState(0);
-  return <div>{test}</div>;
+  return <Layout>children</Layout>;
 };
 
 export default Home;
