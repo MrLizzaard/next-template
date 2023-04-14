@@ -4,16 +4,16 @@ const createJestConfig = nextJest({
   dir: "./",
 });
 
-const customJestConfig = {
+const config = {
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/src/$1",
-    "^@components/(.*)$": "<rootDir>/src/components/$1",
-    "^@pages/(.*)$": "<rootDir>/src/pages/$1",
-    "^@styles/(.*)$": "<rootDir>/src/styles/$1",
+    "^@/(.*)$": "<rootDir>/$1",
+    "^@components/(.*)$": "<rootDir>/components/$1",
+    "^@pages/(.*)$": "<rootDir>/pages/$1",
+    "^@styles/(.*)$": "<rootDir>/styles/$1",
     "^@public/(.*)$": "<rootDir>/public/$1",
   },
   testEnvironment: "jest-environment-jsdom",
 };
 
-module.exports = createJestConfig(customJestConfig);
+module.exports = createJestConfig(config);

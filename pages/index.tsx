@@ -1,16 +1,12 @@
-// import { Inter } from "next/font/google";
-import Header from "@components/Header";
+import { Inter } from "next/font/google";
 import type { NextPage } from "next";
+import { useState } from "react";
 
-// const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
-const Home: NextPage = () => (
-  <div>
-    Home1
-    {/* <Image src={TestImg} width="500" height="500" alt="test" /> */}
-    <Header />
-    Home2
-  </div>
-);
+const Home: NextPage = () => {
+  const [test, setTest] = useState(0);
+  return <div>{test}</div>;
+};
 
 export default Home;
