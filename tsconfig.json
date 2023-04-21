@@ -21,7 +21,8 @@
       "@components/*": ["./components/*"],
       "@utils/*": ["utils/*"],
       "@hooks/*": ["hooks/*"],
-      "@types/*": ["types/*"]
+      "@types/*": ["types/*"],
+      "@styles/*": ["styles/*"]
     }
   },
   "include": [
@@ -29,7 +30,8 @@
     "**/*.ts",
     "**/*.tsx",
     "jest.config.js",
-    "jest.setup.js"
+    "jest.setup.js",
+    "next.config.js"
   ],
   "exclude": ["node_modules"]
 }

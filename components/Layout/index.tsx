@@ -1,10 +1,17 @@
-import React from "react";
+import { ReactNode } from "react";
+import Header from "./Header";
+import Aside from "./Aside";
 
-const Layout = ({ children }: any) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div>
-      Layout
-      <div>{children}</div>
+      <Aside />
+      <Header />
+      {children}
     </div>
   );
 };

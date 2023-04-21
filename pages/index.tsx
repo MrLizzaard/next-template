@@ -1,11 +1,20 @@
-// import { Inter } from "next/font/google";
+import React from "react";
 import Layout from "@/components/Layout";
 import type { NextPage } from "next";
 
-// const inter = Inter({ subsets: ["latin"] });
+import { useSession } from "next-auth/react";
 
 const Home: NextPage = () => {
-  return <Layout>children</Layout>;
+  const { status } = useSession();
+
+  // 여기서 NEXT AUTH 처리하기
+  return (
+    <>
+      {status === "loading" && <div>로딩중</div>}
+      {status === "authenticated" && <div>로그인화면</div>}
+      {status === "unauthenticated" && <Layout>메인화면</Layout>}
+    </>
+  );
 };
 
 export default Home;
